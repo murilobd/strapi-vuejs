@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_layouts_hero_header_1_s",
+  "info": {
+    "name": "Hero Header 1",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "tinyLogo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.image"
+    },
+    "navLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.menus"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "backgroundImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.image",
+      "required": true
+    },
+    "button1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.button"
+    },
+    "button2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.button"
+    }
+  }
+}
