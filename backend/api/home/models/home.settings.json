@@ -12,18 +12,31 @@
     "header": {
       "type": "component",
       "repeatable": false,
-      "component": "layouts.hero-header-1"
+      "component": "layouts.hero-header-1",
+      "required": true
     },
-    "lang": {
-      "type": "enumeration",
-      "enum": [
-        "english",
-        "french",
-        "german"
-      ],
-      "default": "english",
+    "features": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layouts.centered-4-features",
+      "required": true
+    },
+    "newsletter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layouts.subscribe-newsletter",
+      "required": true
+    },
+    "name": {
+      "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "private": true
+    },
+    "locale": {
+      "unique": true,
+      "columnName": "locale",
+      "model": "locale"
     }
   }
 }

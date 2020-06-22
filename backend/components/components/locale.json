@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_locales",
+  "info": {
+    "name": "locale",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "locale": {
+      "type": "enumeration",
+      "enum": [
+        "en",
+        "fr",
+        "de"
+      ],
+      "default": "en",
+      "required": true,
+      "unique": true
+    }
+  }
+}

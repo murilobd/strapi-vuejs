@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layouts_centered_4_features",
+  "info": {
+    "name": "Centered 4 features",
+    "icon": "columns"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "iconLeftWithTitleSubtitleRight": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.icon-left-title-subtitle-right"
+    }
+  }
+}

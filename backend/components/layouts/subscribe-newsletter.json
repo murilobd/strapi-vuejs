@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_layouts_subscribe_newsletters",
+  "info": {
+    "name": "Subscribe Newsletter",
+    "icon": "bacon"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "placeholderEmailInput": {
+      "type": "string",
+      "required": true,
+      "default": "Enter your e-mail"
+    },
+    "button": {
+      "type": "string",
+      "required": true
+    },
+    "textPrivacyPolicy": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_icon_left_title_subtitle_rights",
+  "info": {
+    "name": "icon left title subtitle right",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

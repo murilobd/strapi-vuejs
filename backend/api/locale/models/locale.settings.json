@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locales",
+  "info": {
+    "name": "Locale"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "en",
+        "fr",
+        "de"
+      ],
+      "required": true,
+      "unique": true,
+      "default": "en"
+    }
+  }
+}

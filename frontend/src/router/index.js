@@ -1,29 +1,44 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import { loadLanguageAsync } from "@/i18n";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    alias: "/",
+    path: "/en",
+    name: "home-en",
+    component: Home,
+    meta: {
+      model: "homes",
+      lang: "en"
+    }
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/fr",
+    name: "home-fr",
+    component: Home,
+    meta: {
+      model: "homes",
+      lang: "fr"
+    }
   }
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+// eslint-disable-next-line space-before-function-paren
+router.beforeEach(async (to, from, next) => {
+  const lang = to.meta.lang;
+  const model = to.meta.model;
+  await loadLanguageAsync(lang, model, to.name);
+  next();
+});
+
+export default router;
